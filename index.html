@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Ranju ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffd1dc, #e6ccff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    /* floating hearts */
+    body::before {
+      content: "💗 💕 💖 💞 💓";
+      position: absolute;
+      top: -10%;
+      width: 100%;
+      font-size: 30px;
+      animation: floatHearts 12s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes floatHearts {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(120vh); }
+    }
+
+    .container {
+      max-width: 90%;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 30px 20px;
+      border-radius: 25px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      color: #333;
+    }
+
+    p {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 25px;
+      white-space: pre-line;
+    }
+
+    button {
+      padding: 12px 20px;
+      margin: 8px;
+      border: none;
+      border-radius: 30px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .yes {
+      background: #ff7aa2;
+      color: white;
+    }
+
+    .yes:hover {
+      transform: scale(1.08);
+    }
+
+    .no {
+      background: #eee;
+      color: #333;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🎶 Background Music -->
+  <audio autoplay loop volume="0.3">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_1e0b91a3f2.mp3?filename=romantic-piano-112191.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+
+    <div id="screen1">
+      <h2>For Ranju ❤️</h2>
+      <p>Tap to continue 😌</p>
+      <button class="yes" onclick="nextScreen(2)">Okay 😗</button>
+    </div>
+
+    <div id="screen2" class="hidden">
+      <h2>Okay first of all… Hi 🤭</h2>
+      <p>You're stuck here now 😗</p>
+      <button class="yes" onclick="nextScreen(3)">Uh oh 😌</button>
+    </div>
+
+    <div id="screen3" class="hidden">
+      <h2>Be honest 👀</h2>
+      <p>I’m annoying…  
+but you like it right? 😬😗</p>
+      <button class="yes" onclick="nextScreen(4)">Obviously 🙄❤️</button>
+    </div>
+
+    <div id="screen4" class="hidden">
+      <h2>Important question 😌</h2>
+      <p>Do you REALLY love love me 😬😗</p>
+
+      <button class="yes" onclick="nextScreen(5)">
+        OBVIOUSLY OFCOURSE YES✋🏻❤️
+      </button>
+
+      <button class="no" onclick="alert(
+        'Ohhhhhhhhhhhhhh hange👏🏻👏🏻👏🏻 mmmhmmmhmmhmm\n\nIlla illa irli irli bidi✋🏻\nIlla shhhh it’s okay.\nSorry kshamsbidi🙏🏻\nEy✋🏻 shh irli'
+      )">
+        No 🙂
+      </button>
+    </div>
+
+    <div id="screen5" class="hidden">
+      <p>
+Okay okay enough drama.  
+Focus. Serious face.  
+(Stop smiling like that 😏)
+      </p>
+
+      <h2>Will you be my Valentine  
+today, tomorrow and forever? 💌</h2>
+
+      <button class="yes" onclick="nextScreen(6)">Yes 💖</button>
+    </div>
+
+    <div id="screen6" class="hidden">
+      <h2>Hehehe 🤭</h2>
+      <p>
+I knew it 😌💗  
+
+— your baby 😗  
+(aka Dhannu)
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    function nextScreen(n) {
+      for (let i = 1; i <= 6; i++) {
+        document.getElementById("screen" + i).classList.add("hidden");
+      }
+      document.getElementById("screen" + n).classList.remove("hidden");
+    }
+  </script>
+
+</body>
+    </html>
